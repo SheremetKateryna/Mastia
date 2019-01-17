@@ -1,0 +1,38 @@
+mixin blog
+   section.layout  
+     .layout_section
+       .blog
+        .layout_blog-main
+           each news in blogNews
+            .blog_card
+               img.blog_img(src=news.img, alt='')
+               h3.blog_header=news.header
+               .blog-_text !{news.text.substr(0,384)} […]
+               button.button READ MORE
+           .blog-card_pages
+             button.button_page 1
+             button.button_page 2
+             button.button_page 
+              i.fa.fa-angle-right
+        aside.layout_blog-aside
+          form.blog_form(action='')
+            input(type='text', placeholder='Searching', name='search')
+            button(type='submit')
+              i.fa.fa-search
+          h3.blog_header Recent Posts
+          each post in recentPosts
+            .blog_post
+              img.blog_img(src=post.img, alt='')
+              .blog_text=post.text
+              a.blog_link(href='#')=post.link
+          h3.blog_header LATEST PROJECTS
+            .layout_row
+              .layout_col-2
+                each project in latestProgect
+                  a.blog_project(href='#')
+                    img(src=project.img, alt='')
+              .layout_col-2
+                each project in latestProgect
+                  a.blog_project(href='#')
+                    img(src=project.img, alt='')
+

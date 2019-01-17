@@ -1,1 +1,22 @@
+//- include data/services
+//- include bem/home_service/home_service
 
+include bem/title/h2
+
+doctype html
+html(lang='en')
+  head
+    meta(charset='UTF-8')
+    title Home
+    link(rel='shortcut icon', href='', type='image/x-icon')
+    link(rel='stylesheet' href='https://use.fontawesome.com/releases/v5.6.3/css/all.css')
+    link(href='https://fonts.googleapis.com/css?family=Open+Sans:300,400,400i,600,700,800|Play:400,700|Raleway:400,500,600,700' rel='stylesheet')
+    link(rel='stylesheet' href='https://use.fontawesome.com/releases/v5.6.3/css/all.css' integrity='sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/' crossorigin='anonymous')
+    link(rel='stylesheet', href='css/normalize.css')
+    link(rel='stylesheet', type='text/css', href='style/less/style.css')
+    link(rel='stylesheet', type='text/css', href='style/css/grid-layout.css')
+    script(src='js/script.js' type='text/html')
+  body
+    include bem/home_slider/home_slider
+    +h2('Recent Projects')
+    include bem/home_prodject/home_prodject

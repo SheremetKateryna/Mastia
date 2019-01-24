@@ -27,11 +27,11 @@ mixin blog
               .blog_text !{post.text}
           h3.blog_header.blog_header__aside LATEST PROJECTS
           .layout_row
-              each project in latestProgect1
+              each project in latestProgect.slice(0,2)
                   a.blog_project(href='#')
                     img(src=project.img, alt='')
           .layout_row
-              each project in latestProgect
+              each project in latestProgect.slice(2,4)
                   a.blog_project(href='#')
                     img(src=project.img, alt='')
           h3.blog_header.blog_header__aside Blog Categories
@@ -43,7 +43,7 @@ mixin blog__full
      .layout_section
        .blog
         .layout_blog-main
-           each news in blogNews
+           each news in blogNews.slice(0,1)
             .blog_card
                img(src=news.img, alt='')
                h3.blog_header=news.header
@@ -60,11 +60,11 @@ mixin blog__full
               .blog_text !{post.text}
           h3.blog_header.blog_header__aside LATEST PROJECTS
           .layout_row
-              each project in latestProgect1
+              each project in latestProgect.slice(0,2)
                   a.blog_project(href='#')
                     img(src=project.img, alt='')
           .layout_row
-              each project in latestProgect
+              each project in latestProgect.slice(2,4)
                   a.blog_project(href='#')
                     img(src=project.img, alt='')
           h3.blog_header.blog_header__aside Blog Categories

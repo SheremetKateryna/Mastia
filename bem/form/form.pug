@@ -1,0 +1,13 @@
+.layout
+  .layout_section
+    form.form(action="#" method="post" name="info_form")
+      input.form_input(type="text" placeholder="First Name" pattern="^[a-zA-Z]+$" required)
+      input.form_input(type="text" placeholder="Last Name" pattern="^[a-zA-Z]+$" required)
+      .form_field
+        input.form_input(type="email" placeholder="Your E-Mail" required)
+        span.form__error Это поле должно содержать E-Mail в формате example@site.com
+      .form_field
+        input.form_input(type="text" placeholder="Website" required)
+        span.form__error Это поле должно содержать URL в формате http://site.com
+      textarea.form_textarea(placeholder="Your Message")
+      input.form_button(type="submit" value="send")

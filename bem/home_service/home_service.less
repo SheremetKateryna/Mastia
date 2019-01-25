@@ -1,5 +1,6 @@
 .service {
   background-color:  #f8f8f8;
+  padding: 80px;
   
   &_item {
     display: flex;
@@ -7,6 +8,10 @@
     justify-content:center;
     align-items: center;
     text-align: center;
+    &:not(:last-child) {
+            margin-bottom: 40px;
+        }
+    // margin-top: 70px;
   }
   
   &_icon {
@@ -19,10 +24,11 @@
     font:400 24px/31px Play;
     color:  #22a7f0;
     padding: 30px;
+    margin: 0;
   }
   
   &_text {
-   font-family:400 14px/31px OpenSans;
+   font:400 14px/31px OpenSans;
    color:  #353535;
    }
 }

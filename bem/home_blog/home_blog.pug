@@ -1,0 +1,9 @@
+mixin blog
+  section.blog
+      each blog in blogNews
+        .blog_card
+          img.blog_img(src=blog.img, alt='')
+          .blog_info
+            date.blog_date=blog.date
+            .blog_text !{blog.text.substr(0,150)} […]
+            button.button_more READ MORE

@@ -1,8 +1,21 @@
-.row
-  .w-1-3
-    img.project(src='img/project1.jpg', alt='')
-  .w-1-3
-    img.project(src='img/project2.jpg', alt='')
-  .w-1-3
-    img.project(src='img/project3.jpg', alt='')
+//- section.projects
+//- .layout_row
+//-   .layout_col-3
+//-     img.project(src='img/project1.jpg', alt='')
+//-   .layout_col-3
+//-     img.project(src='img/project2.jpg', alt='')
+//-   .layout_col-3
+//-     img.project(src='img/project3.jpg', alt='')
+mixin project
+  section.projects
+    .layout_row
+      .layout_col-3
+        each project in projects
+          img.project(src=project.img, alt='')
+      .layout_col-3
+        each project in projects
+          img.project(src=project.img, alt='')
+      .layout_col-3
+        each project in projects
+          img.project(src=project.img, alt='')
 

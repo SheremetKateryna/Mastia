@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>Contact</title>
+    <link rel="shortcut icon" href="" type="image/x-icon">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,400i,600,700,800|Play:400,700|Raleway:400,500,600,700&quot; rel=&quot;stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="style/Normalize.css">
+    <link rel="stylesheet" type="text/css" href="style/style.css">
+  </head>
+  <body>
+    <section class="contact"></section>
+    <h2 class="h2">Contact Us</h2>
+    <div class="layout">
+      <div class="layout_section">
+        <form class="form" action="#" method="post" name="info_form">
+          <input class="form_input" type="text" placeholder="First Name" pattern="^[a-zA-Z]+$" required>
+          <input class="form_input" type="text" placeholder="Last Name" pattern="^[a-zA-Z]+$" required>
+          <div class="form_field">
+            <input class="form_input" type="email" placeholder="Your E-Mail" required><span class="form__error">Это поле должно содержать E-Mail в формате example@site.com</span>
+          </div>
+          <div class="form_field">
+            <input class="form_input" type="text" placeholder="Website" required><span class="form__error">Это поле должно содержать URL в формате http://site.com</span>
+          </div>
+          <textarea class="form_textarea" placeholder="Your Message"></textarea>
+          <input class="form_button" type="submit" value="send">
+        </form>
+      </div>
+    </div>
+    <div class="map _map"></div>
+    <script>
+      var map = null;
+      function createMap() {
+      var loc = {lat: 25.652278, lng: 89.856461};
+      map = new google.maps.Map(document.querySelector('._map'), {zoom: 6, center: loc});
+      }
+    </script>
+    <script async="" defer="" src="https://maps.googleapis.com/maps/api/js?callback=createMap"></script>
+  </body>
+</html>

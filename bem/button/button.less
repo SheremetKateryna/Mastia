@@ -1,0 +1,29 @@
+.button {
+   box-sizing: border-box;
+   background-color:  #26a1e4;
+   padding: 15px 30px;
+   // width: 139px;
+   // height: 41px;
+   border: none;
+   font: 700 14px/14px @fontMariadPro;
+   color: @colorModifier;
+   margin-top: 30px;
+   cursor: pointer;
+   &_page {
+      background: transparent;
+      border-width: 1px;
+      border-color:  #0f80be;
+      border-style: solid;
+      width: 23px;
+      height: 23px;
+      color:  #666666;
+      font: 400 14px @fontReleway;
+      &:not(:last-child){
+         margin-right: 5px;
+      }
+      &__active{
+         background-color: @colorAccent;
+         color: @colorModifier;
+      }
+   }
+}

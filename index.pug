@@ -1,1 +1,107 @@
 
+include data/services
+include data/projects
+include data/counts
+include data/hblog
+
+include bem/home_service/home_service
+include bem/home_project/home_project
+include bem/home_count/home_count
+include bem/home_blog/home_blog
+include bem/home_slider/home_slider
+
+
+doctype html
+html(lang='en')
+  head
+    meta(charset='UTF-8')
+    title Home
+    link(rel='shortcut icon', href='', type='image/x-icon')
+    link(rel='stylesheet' href='https://use.fontawesome.com/releases/v5.6.3/css/all.css')
+    link(href='https://fonts.googleapis.com/css?family=Open+Sans:300,400,400i,600,700,800|Play:400,700|Raleway:400,500,600,700' rel='stylesheet')
+    link(rel='stylesheet' href='https://use.fontawesome.com/releases/v5.6.3/css/all.css' integrity='sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/' crossorigin='anonymous')
+    link(rel='stylesheet', type='text/css', href='style/Normalize.css')
+    link(rel='stylesheet', type='text/css', href='style/style.css')
+    link(rel='stylesheet', type='text/css', href='slick/slick/slick.css')
+    link(rel='stylesheet', type='text/css', href='slick/slick/slick-theme.css')
+    script(src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js')
+    script(src='js/script.js' type='text/html')
+  body
+
+    +service
+    //- section.service
+    //-   .layout_row
+    //-     .layout_col-3
+    //-       .service_item
+    //-         .service_icon
+    //-           i.fab.fa-slack-hash
+    //-         h5.service_title nibh ridiculus1
+    //-         .service_text
+    //-           | Donec ullamcorper nulla non metus auctor fringilla.Cum sociis natoque penatibus etmagnis dis parturie nt montes,     nascetur.
+    //-     .layout_col-3
+    //-       .service_item
+    //-         .service_icon
+    //-           i.fab.fa-slack-hash
+    //-         h5.service_title nibh ridiculus2
+    //-         .service_text
+    //-           | Donec ullamcorper nulla non metus auctor fringilla.Cum sociis natoque penatibus etmagnis dis parturie nt montes, nascetur.
+    //-     .layout_col-3
+    //-       .service_item
+    //-         .service_icon
+    //-           i.fab.fa-slack-hash
+    //-         h5.service_title nibh ridiculus3
+    //-         .service_text
+    //-           | Donec ullamcorper nulla non metus auctor fringilla.Cum sociis natoque penatibus etmagnis dis parturie nt montes, nascetur.
+    //-   .layout_row
+    //-     .layout_col-3
+    //-       .service_item
+    //-         .service_icon
+    //-           i.fab.fa-slack-hash
+    //-         h5.service_title nibh ridiculus1
+    //-         .service_text
+    //-           | Donec ullamcorper nulla non metus auctor fringilla.Cum sociis natoque penatibus etmagnis dis parturie nt montes, nascetur.
+    //-     .layout_col-3
+    //-       .service_item
+    //-         .service_icon
+    //-           i.fab.fa-slack-hash
+    //-         h5.service_title nibh ridiculus2
+    //-         .service_text
+    //-           | Donec ullamcorper nulla non metus auctor fringilla.Cum sociis natoque penatibus etmagnis dis parturie nt montes, nascetur.
+    //-     .layout_col-3
+    //-       .service_item
+    //-         .service_icon
+    //-           i.fab.fa-slack-hash
+    //-         h5.service_title nibh ridiculus3
+    //-         .service_text
+    //-           | Donec ullamcorper nulla non metus auctor fringilla.Cum sociis natoque penatibus etmagnis dis parturie nt montes, nascetur.
+    h2.h2 Recent Projects
+    +project
+    +clients
+    //- section.projects
+    //- .layout_row
+    //-   .layout_col-3
+    //-     img.project(src='img/project1.jpg', alt='')
+    //-   .layout_col-3
+    //-     img.project(src='img/project2.jpg', alt='')
+    //-   .layout_col-3
+    //-     img.project(src='img/project3.jpg', alt='')
+    //-     //- include bem/home_project/home_project
+    //- section.clients
+    //-   .client_item
+    //-     .client_count 556
+    //-     .client_text happy client
+    //-   .client_item
+    //-     .client_count 56
+    //-     .client_text projects
+    //-   .client_item
+    //-     .client_count 556
+    //-     .client_text happy client
+    //-   .client_item
+    //-     .client_count 556
+    //-     .client_text happy client
+    h2.h2 From Blog
+    +blog
+    script(type='text/javascript', src='//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js')
+    script(type='text/javascript', src='slick/slick/slick.min.js')
+    //- script(src='js/slider.js' type='text/html')
+

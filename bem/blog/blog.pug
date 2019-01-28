@@ -1,0 +1,74 @@
+mixin blog
+   section.layout  
+     .layout_section
+       .blog
+        .layout_blog-main
+           each news in blogNews
+            .blog_card
+               img(src=news.img, alt='')
+               h3.blog_header=news.header
+               .blog-_text !{news.text.substr(0,384)} […]
+               form(method='get', action='full-news.html')
+                button.button(type='submit') READ MORE
+           .blog_pages
+             button.button_page 1
+             button.button_page 2
+             button.button_page.button_page__active 
+              i.fa.fa-angle-right
+        aside.layout_blog-aside
+          .blog_searching(action='#')
+            input.blog_input(type='text', placeholder='Searching', name='search')
+            button.blog_search(type='submit')
+              i.fa.fa-search
+          h3.blog_header.blog_header__aside Recent Posts
+          each post in recentPosts
+            .blog_post
+              img.blog_img(src=post.img, alt='')
+              .blog_text !{post.text}
+          h3.blog_header.blog_header__aside LATEST PROJECTS
+          .layout_row
+              each project in latestProgect.slice(0,2)
+                  a.blog_project(href='#')
+                    img(src=project.img, alt='')
+          .layout_row
+              each project in latestProgect.slice(2,4)
+                  a.blog_project(href='#')
+                    img(src=project.img, alt='')
+          h3.blog_header.blog_header__aside Blog Categories
+          each item in blogCategories
+            a.blog_text(href='#') !{item.category}
+
+mixin blog__full
+   section.layout  
+     .layout_section
+       .blog
+        .layout_blog-main
+           each news in blogNews.slice(0,1)
+            .blog_card
+               img(src=news.img, alt='')
+               h3.blog_header=news.header
+               .blog-_text !{news.text}
+        aside.layout_blog-aside
+          .blog_searching(action='#')
+            input.blog_input(type='text', placeholder='Searching', name='search')
+            button.blog_search(type='submit')
+              i.fa.fa-search
+          h3.blog_header.blog_header__aside Recent Posts
+          each post in recentPosts
+            .blog_post
+              img.blog_img(src=post.img, alt='')
+              .blog_text !{post.text}
+          h3.blog_header.blog_header__aside LATEST PROJECTS
+          .layout_row
+              each project in latestProgect.slice(0,2)
+                  a.blog_project(href='#')
+                    img(src=project.img, alt='')
+          .layout_row
+              each project in latestProgect.slice(2,4)
+                  a.blog_project(href='#')
+                    img(src=project.img, alt='')
+          h3.blog_header.blog_header__aside Blog Categories
+          each item in blogCategories
+            a.blog_text(href='#') !{item.category}
+
+

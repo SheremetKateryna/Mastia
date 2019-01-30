@@ -1,7 +1,13 @@
-
+include data/projects
 include data/blog
+include data/footer
+
 include bem/blog/blog
+include bem/blog_card/blog_card
+include bem/aside/aside
 include bem/button/button
+include bem/footer/footer
+
 
 doctype html
 html(lang='en')
@@ -12,8 +18,9 @@ html(lang='en')
     link(href='https://fonts.googleapis.com/css?family=Play:400,700' rel='stylesheet')
     link(href='https://fonts.googleapis.com/css?family=Raleway:600' rel='stylesheet')
     link(rel='stylesheet', href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css')
-    link(rel='stylesheet', type='text/css', href='css/style.css')
+    link(rel='stylesheet', type='text/css', href='style/style.css')
     script(src='js/script.js')
     script(src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js')
   body
   +blog
+  +footer

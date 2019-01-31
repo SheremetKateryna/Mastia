@@ -1,0 +1,17 @@
+.menu {
+	font: 400 14px/1 'Open Sans', sans-serif;
+	margin:  20px 15px 50px 0;
+	display: flex;
+	justify-content: flex-end;
+}
+
+.link {
+	color: #4b4b4b;
+	text-decoration: none;
+}
+
+.menu-item:not(:last-child)::after {
+	display: inline-block;
+	content: '/';
+	margin: 0 35px;
+}

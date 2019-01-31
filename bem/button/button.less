@@ -1,0 +1,48 @@
+.button {
+   box-sizing: border-box;
+   background-color:  #26a1e4;
+   padding: 15px 30px;
+   border: none;
+   font: 700 14px/14px @fontMariadPro;
+   color: @colorModifier;
+   cursor: pointer;
+   &_share {
+      background-color:  #26a1e4;
+      width: 102px;
+      padding: 10px 0;
+      border: none;
+      color: @colorModifier;
+      cursor: pointer;
+      margin-right: 10px;
+       &__fb {
+         background-color:#2f6ae0;
+       }
+       &__g {
+         background-color:#c73252;
+       }
+       &__inst {
+         background-color:#595959;
+       }
+   }
+   &_page {
+      background: transparent;
+      border-width: 1px;
+      border-color:  #0f80be;
+      border-style: solid;
+      width: 23px;
+      height: 23px;
+      color:  #666666;
+      font: 400 14px @fontReleway;
+      &:not(:last-child){
+         margin-right: 5px;
+      }
+      &__active{
+         background-color: @colorAccent;
+         color: @colorModifier;
+      }
+   }
+      &__modifier {
+        background: transparent;
+        border: 2px solid @colorModifier;;
+    }
+}

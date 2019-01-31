@@ -1,0 +1,24 @@
+mixin blog
+   section.layout  
+     .layout_section
+       .blog
+        .layout_blog-main
+           +blog_card
+           .blog_pages
+             button.button_page 1
+             button.button_page 2
+             button.button_page.button_page__active 
+              i.fa.fa-angle-right
+        +aside
+
+mixin blog__full
+   section.layout  
+     .layout_section
+       .blog
+        .layout_blog-main
+           +blog_card__full
+
+           +share
+        +aside
+
+

@@ -1,11 +1,12 @@
 include data/projects
-
+include bem/page_title/page_title
+include bem/project_project/project_project
 doctype html
 html(lang='en')
   head
     meta(charset='UTF-8')
     title Project
-    link(rel='shortcut icon', href='', type='image/x-icon')
+    link(rel='shortcut icon', href='img/favicon.png', type='image/x-icon')
     link(rel='stylesheet' href='https://use.fontawesome.com/releases/v5.6.3/css/all.css')
     link(href='https://fonts.googleapis.com/css?family=Open+Sans:300,400,400i,600,700,800|Play:400,700|Raleway:400,500,600,700" rel="stylesheet')
     link(rel='stylesheet' href='https://use.fontawesome.com/releases/v5.6.3/css/all.css' integrity='sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/' crossorigin='anonymous')
@@ -13,9 +14,13 @@ html(lang='en')
     link(rel='stylesheet', type='text/css', href='style/style.css')
     script(src='js/script.js' type='text/html')
   body
+    include bem/header/header
+    +page_title('projects')
     .layout
         .layout_section
-            h2.h2 Recent Projects
-            include bem/project_menu/project_menu
-            include bem/project_project/project_project
+            .project
+                h2.h2 Recent Projects
+                include bem/project_menu/project_menu
+                +project(2,3)
+
 

@@ -1,7 +1,15 @@
+@layoutGutter: 15px;
+@layoutPadding: 20px;
+
+.contact{
+	margin: 80px 0;
+}
+
 .form {
-	padding:50px 0 30px 0;
+	padding: 50px 0 0 0;
 	box-sizing: border-box;
 	&_field {
+		// width: calc(50% - 39px);
 	}
 		&_input{
 		border: 1px solid #d7d7d7;
@@ -9,31 +17,30 @@
 		height: 40px;
 		font:400 14px OpenSans, sans-serif;
 		color: black;
-		padding-left: 20px;
-		margin-bottom: 20px; 
-		&:nth-child(2n-1) {
-			margin-right: 30px;
-			}
+		// padding-left: 20px;
+		// margin-bottom: 20px; 
+		// &:nth-child(2n-1) {
+		// 	margin-right: 30px;
+		// 	}
 			&::placeholder {
 			font:300 14px OpenSans, sans-serif;
 			color:#575757;
+			padding: 0 20px;
 			}
-			&:invalid:not(:placeholder-shown) {
-			border-color: red;
-			}
-			&:valid:not(:placeholder-shown) {
-			border-color: green;
-			}
+			// &__check {
+			// 	width: 100%;
+			// }
 		}
 		&_textarea {
-		width: 100%;
+		width: calc(100% - 20px);
 		height: 170px;
 		margin-top: 10px;
-		padding-left: 20px;
+	
 			&::placeholder {
 			font:300 14px OpenSans, sans-serif;
 			color:#575757;
-			}
+			padding-left: 20px;
+		}
 		}
 		&_button {
 		background-color: #26a1e4;
@@ -55,13 +62,18 @@
 }
 	}
 
-input:valid:not(:placeholder-shown) {
+.form_input:valid:not(:placeholder-shown) {
 	border-color: green;
 }
 
-input:invalid:not(:placeholder-shown) {
+.form_input:invalid:not(:placeholder-shown) {
 	border-color: red;
 }
-input:invalid:not(:placeholder-shown) + .form__error {
+.form_input:invalid:not(:placeholder-shown) + .form__error {
 	display: block;
 }
+
+    // .row{
+    //     display: flex;
+    //     justify-content: space-between;
+    // }

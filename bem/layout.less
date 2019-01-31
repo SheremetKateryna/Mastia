@@ -1,5 +1,5 @@
 @layoutWidth: 1140px;
-@layoutGutter: 30px;
+@layoutGutter: 15px;
 @layoutPadding: @layoutGutter;
 
 .layout {
@@ -17,6 +17,10 @@
             margin-bottom: @layoutGutter;
         }
     }
+    &_col-2 {
+        @gutters: @layoutGutter * 2 / 2;
+        width: calc(100% / 2 - @gutters);
+    }
     &_col-3 {
         @gutters: @layoutGutter * 2 / 3;
         width: calc(100% / 3 - @gutters);
@@ -24,15 +28,6 @@
     &_col-4 {
         @gutters: @layoutGutter * 3 / 4;
         width: calc(25% - @gutters);
-    }
-    &_blog-main {
-        width: 750px;
-        margin-right: @layoutGutter;
-    }
-    &_aside {
-        width: 360px;
-        display: flex;
-        flex-direction: column;
     }
 
 }

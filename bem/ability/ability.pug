@@ -1,12 +1,11 @@
 mixin ability_item 
-            .ability_item
-               each item in abilityItem
-                  h2.h2.h2__short=item.header
-                  p.ability_text=item.text1
-                  p.ability_text=item.text2
-                  
+   .ability_item
+      each item in abilityWhoWeAre
+         h2.h2.h2__short=item.header
+         p.ability_text=item.text1
+         p.ability_text=item.text2
 
-mixin ability
+mixin abilityWho
    .layout_section
       .ability
          .layout_row
@@ -14,4 +13,19 @@ mixin ability
                img.ability_img(src='img/ability.png', alt='')
             .layout_col-2
                +ability_item 
-               button.button(type='submit') OUR SERVICES
+               .ability_button
+                  button.button(type='submit') OUR SERVICES
+
+mixin list
+   li
+   li
+   li
+
+mixin abilityWhatWeDo
+   .layout_section
+      .ability
+         .layout_row
+            .layout_col-2
+               +list
+            .layout_col-2
+               +ability_item 

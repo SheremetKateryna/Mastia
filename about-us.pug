@@ -5,26 +5,34 @@ include data/ability
 include data/footer
 
 include bem/ability/ability
-include bem/button/button
 include bem/team/team
 include bem/footer/footer
 include bem/home_service/home_service
+include bem/header/header
+include bem/page_title/page_title
 
 
 doctype html
 html(lang='en')
   head
     meta(charset='UTF-8')
-    title
-    link(href='https://fonts.googleapis.com/css?family=Open+Sans:400,400i,700' rel='stylesheet')
-    link(href='https://fonts.googleapis.com/css?family=Play:400,700' rel='stylesheet')
-    link(href='https://fonts.googleapis.com/css?family=Raleway:600' rel='stylesheet')
+    title About Us
+    link(rel='shortcut icon' href='img/favicon.png' type='image/x-icon')
+    link(rel='stylesheet' href='https://use.fontawesome.com/releases/v5.6.3/css/all.css')
+    link(href='https://fonts.googleapis.com/css?family=Open+Sans:300,400,400i,600,700,800|Play:400,700|Raleway:400,500,600,700" rel="stylesheet')
+    link(rel='stylesheet', href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css')
+    link(rel='stylesheet' href='https://use.fontawesome.com/releases/v5.6.3/css/all.css' integrity='sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/' crossorigin='anonymous')
     link(rel='stylesheet', href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css')
     link(rel='stylesheet', type='text/css', href='style/normalize.css')
     link(rel='stylesheet', type='text/css', href='style/style.css')
     script(src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js')
+    script(src='js/link.js')
+    script(src='js/page.js')
   body
-  +ability
+  +header
+  +page_title('about us')
+  +abilityWho
   +service_about
+  +abilityWhatWeDo
   +team
   +footer

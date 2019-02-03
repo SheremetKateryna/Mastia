@@ -1,0 +1,21 @@
+.project {
+    margin: 80px 0;
+    &_inner {
+    margin-top: 30px;
+    }
+    &_photo {
+    width: 360px;
+    height: 360px;
+    &__modifier {
+        height: 240px;
+        position: relative;
+        transition: width 2s;
+        &:hover {
+        cursor: zoom-in; //url(../img/search-plus-solid.svg), pointer;
+        position: absolute;
+        background-color: #22a7f0;;
+        opacity: 0.6;
+        }
+    }
+    }
+}

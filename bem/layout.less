@@ -17,6 +17,10 @@
             margin-bottom: @layoutGutter;
         }
     }
+    &_col-2 {
+        @gutters: @layoutGutter * 2 / 2;
+        width: calc(100% / 2 - @gutters);
+    }
     &_col-3 {
         @gutters: @layoutGutter * 2 / 3;
         width: calc(100% / 3 - @gutters);
@@ -29,7 +33,7 @@
         width: 750px;
         margin-right: @layoutGutter;
     }
-    &_blog-aside {
+    &_aside {
         width: 360px;
         display: flex;
         flex-direction: column;

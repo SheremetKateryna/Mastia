@@ -1,21 +1,34 @@
 include data/projects
+include data/footer
+include bem/page_title/page_title
+include bem/project/project
+include bem/header/header
+include bem/footer/footer
 
 doctype html
 html(lang='en')
   head
     meta(charset='UTF-8')
-    title Project
-    link(rel='shortcut icon', href='', type='image/x-icon')
+    title project
+    link(rel='shortcut icon', href='img/favicon.png', type='image/x-icon')
     link(rel='stylesheet' href='https://use.fontawesome.com/releases/v5.6.3/css/all.css')
     link(href='https://fonts.googleapis.com/css?family=Open+Sans:300,400,400i,600,700,800|Play:400,700|Raleway:400,500,600,700" rel="stylesheet')
     link(rel='stylesheet' href='https://use.fontawesome.com/releases/v5.6.3/css/all.css' integrity='sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/' crossorigin='anonymous')
-    link(rel='stylesheet', type='text/css', href='style/Normalize.css')
+    link(rel='stylesheet', href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css')
+    link(rel='stylesheet', type='text/css', href='style/normalize.css')
     link(rel='stylesheet', type='text/css', href='style/style.css')
-    script(src='js/script.js' type='text/html')
+    script(src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js')
+    script(src='js/link.js')
+    script(src='js/page.js')
   body
+    +header
+    +page_title('projects')
     .layout
         .layout_section
-            h2.h2 Recent Projects
-            include bem/project_menu/project_menu
-            include bem/project_project/project_project
+            .project
+                h2.h2 Recent Projects
+                include bem/project_menu/project_menu
+                +project(2,3)
+    +footer
+
 

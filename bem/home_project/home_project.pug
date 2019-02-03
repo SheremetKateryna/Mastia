@@ -6,16 +6,29 @@
 //-     img.project(src='img/project2.jpg', alt='')
 //-   .layout_col-3
 //-     img.project(src='img/project3.jpg', alt='')
-mixin project
-  section.projects
-    .layout_row
-      .layout_col-3
-        each project in projects
-          img.project(src=project.img, alt='')
-      .layout_col-3
-        each project in projects
-          img.project(src=project.img, alt='')
-      .layout_col-3
-        each project in projects
-          img.project(src=project.img, alt='')
+//- mixin project
+//-   section.projects
+//-     .layout_row
+//-       .layout_col-3
+//-         each project in projects
+//-           img.project_photo(src=project.img, alt='')
+//-       .layout_col-3
+//-         each project in projects
+//-           img.project_photo(src=project.img, alt='')
+//-       .layout_col-3
+//-         each project in projects
+//-           img.projec_photo(src=project.img, alt='')
 
+mixin _project(item)
+    .layout_col-3
+        img.project_photo(src=item.img, alt='')
+mixin project(colNeeded)
+    - var col = 0;
+    - var row = 0;
+    - var rowNeeded = projectsItems.length / colNeeded;
+    while row < rowNeeded
+        .layout_row
+            while col < (row + 1) * colNeeded
+                +_project(projectsItems[col])
+                - col++;
+        - row++;

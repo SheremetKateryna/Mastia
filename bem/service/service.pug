@@ -39,11 +39,11 @@ mixin _service(item)
             .service_icon !{item.icon}
             h5.service_title=item.title
             .service_text=item.text
-mixin service(colNeeded)
+mixin service(rowNeeded,colNeeded)
     - var col = 0;
     - var row = 0;
     //- - var rowNeeded = serviceItems.length / colNeeded;
-    - var rowNeeded = 2;
+    //- - var rowNeeded = 2;
     while row < rowNeeded
         .layout_row
             while col < (row + 1) * colNeeded

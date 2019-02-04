@@ -1,12 +1,17 @@
 .button {
    box-sizing: border-box;
-   background-color:  #26a1e4;
+   background-color: @colorAccent;
    padding: 15px 30px;
    border: none;
-   font: 700 14px/14px @fontMariadPro;
+   font: 700 14px/14px @fontPlay;
    color: @colorModifier;
    cursor: pointer;
    text-transform: uppercase;
+   &__home {
+   font: 700 14px/25px OpenSans, sans-serif;
+   color: @colorAccent;
+   background-color: transparent;
+   }
    &_share {
       background-color:  #26a1e4;
       width: 102px;
@@ -51,6 +56,19 @@
         color: @colorAccent;
         position: absolute;
         right: 0;
-        bottom: 0;
+        bottom: 15px;
       }
+    &__dropdown {
+        width: 62px;
+        height: 62px;
+        display: flex;
+        justify-content: center;
+        background: transparent;
+        color: @colorAccentWeight;
+        border-right: 1px solid #ebebeb;
+        &__active {
+          background-color: @colorAccent;
+          color: @colorModifier;
+        }
+    }
 }

@@ -21,4 +21,15 @@ mixin blog__full
            +share
         +aside
 
+mixin blog_home
+  section.blog-inner
+      each blog in blogNews
+        .blog_card
+          img.blog_img(src=blog.img, alt='')
+          .blog-info
+            date.blog-info_date=blog.date
+            .blog-info_text !{blog.text.substr(0,150)} […]
+            form.card_button(method='get', action='full-news.html')
+              button.button.button__home(type='submit') READ MORE
+
 

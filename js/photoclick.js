@@ -15,7 +15,7 @@
 
 
   $(document).ready(function() {
-  	alert('hello');
+  	// alert('hello');
         $('.project_photo__modifier').click(function() {
             $('.project_photo__modifier').css('width', '600px');
             // $(this).css('right', '4px');

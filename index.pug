@@ -26,9 +26,13 @@ html(lang='en')
     link(rel='stylesheet', type='text/css', href='slick/slick/slick.css')
     link(rel='stylesheet', type='text/css', href='slick/slick/slick-theme.css')
     script(src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js')
+    script(type='text/javascript', src='//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js')
+    script(type='text/javascript', src='slick/slick/slick.min.js')
+    script(src='js/slider.js')
     script(src='js/link.js')
     script(src='js/page.js')
     script(src='js/photoclick.js')
+
   body
     +header
     include bem/slider/slider
@@ -57,19 +61,18 @@ html(lang='en')
             h2.h2 From Blog
             +blog_home
     +footer
-    script(type='text/javascript', src='//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js')
-    script(type='text/javascript', src='slick/slick/slick.min.js')
-    script.
-      $(document).ready(function(){
-      $('.header-slider').slick({
-      arrows: true,
-      dots: false,
-      speed: 700,
-      //- infinite: true,
-      slidesToShow: 1,
-      //- adaptiveHeight: true
-      });
-      });
+
+    //- script.
+    //-   $(document).ready(function(){
+    //-   $('.header-slider').slick({
+    //-   arrows: true,
+    //-   dots: false,
+    //-   speed: 700,
+    //-   //- infinite: true,
+    //-   slidesToShow: 1,
+    //-   //- adaptiveHeight: true
+    //-   });
+    //-   });
     script.
       $(document).ready(function(){
       $('.project_inner img').addClass('project_photo__modifier');

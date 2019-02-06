@@ -8,9 +8,11 @@
    cursor: pointer;
    text-transform: uppercase;
    &__home {
-   font: 700 14px/25px OpenSans, sans-serif;
-   color: @colorAccent;
-   background-color: transparent;
+    background: transparent;
+    color: @colorAccent;
+    // position: absolute;
+    // right: 0;
+    // bottom: 15px;
    }
    &_share {
       background-color:  #26a1e4;
@@ -51,13 +53,6 @@
         background: transparent;
         border: 2px solid @colorModifier;;
     }
-    &__transparent {
-        background: transparent;
-        color: @colorAccent;
-        position: absolute;
-        right: 0;
-        bottom: 15px;
-      }
     &__dropdown {
         width: 62px;
         height: 62px;

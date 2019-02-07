@@ -1,8 +1,8 @@
     $(document).ready(function(){
       $('.header-slider').slick({
         arrows: true,
-        // nextArrow: '._nextArrow',
-        // prevArrow: '._prevArrow',
+        nextArrow: '._nextArrow',
+        prevArrow: '._prevArrow',
       });
       $('.reviews-slider').slick({
         dots: true,

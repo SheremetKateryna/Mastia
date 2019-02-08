@@ -3,7 +3,7 @@
   background-repeat: no-repeat;
   background-size: cover;
   height: 760px;
-  background-color:  #353535;
+  background-color: @color;
   position: relative;
     &::before {
     content: '';
@@ -36,13 +36,13 @@
 }
   &_title{
    text-transform: uppercase;
-   font:600 50px Raleway;
-   color:  #ffffff;
+   font:600 50px @fontReleway;
+   color: @colorModifier;
   }
   
   &_text {
-    font:400 14px/22px OpenSans;
-    color:  #ffffff;
+    font:400 14px/22px @fontOpenSans;
+    color: @colorModifier;
     width: 560px;
     margin: 10px auto 30px;
   }

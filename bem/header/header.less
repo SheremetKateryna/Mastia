@@ -19,7 +19,7 @@
     margin-right: 15px;
     }
     &_contact-item {
-    font: 400 14px/24px 'Myriad Pro',sans-serif;
+    font: 400 14px/24px @fontMariadPro;
     color:  #353535;
     margin-right: 40px;
         &:last-child {
@@ -40,7 +40,7 @@
     justify-content: space-between;
     }
     &_menu-item {
-    font: 400 14px/31px OpenSans, sans-serif;
+    font: 400 14px/31px @fontOpenSans;
     color:  #4b4b4b;
     text-decoration: none;
     margin-right:40px;
@@ -49,11 +49,11 @@
         margin-right: 0;
         }
         &:hover {
-        color:  #26a1e4;
+        color: @colorAccent;
         }
     }
 }
 
 ._current {
-    color: #26a1e4;
+    color: @colorAccent;
 }

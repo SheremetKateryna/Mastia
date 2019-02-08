@@ -1,38 +1,3 @@
-//- mixin service
-//-     section.service
-//-         .layout_row
-//-             .layout_col-3
-//-                 .service_item
-//-                     i.fab.fa-slack-hash
-//-                         h5.service_title= serviceItems[0].title
-//-                         .service_text= serviceItems[0].text
-//-             .layout_col-3
-//-                 .service_item
-//-                     i.fab.fa-slack-hash
-//-                         h5.service_title= serviceItems[1].title
-//-                         .service_text= serviceItems[1].text
-//-             .layout_col-3
-//-                 .service_item
-//-                     i.fab.fa-slack-hash
-//-                         h5.service_title= serviceItems[2].title
-//-                         .service_text= serviceItems[2].text
-//-         .layout_row
-//-             .layout_col-3
-//-                 .service_item
-//-                     i.fab.fa-slack-hash
-//-                         h5.service_title= serviceItems[3].title
-//-                         .service_text= serviceItems[3].text
-//-             .layout_col-3
-//-                 .service_item
-//-                     i.fab.fa-slack-hash
-//-                         h5.service_title= serviceItems[4].title
-//-                         .service_text= serviceItems[4].text
-//-             .layout_col-3
-//-                 .service_item
-//-                     i.fab.fa-slack-hash
-//-                         h5.service_title= serviceItems[5].title
-//-                         .service_text= serviceItems[5].text
-
 mixin _service(item)
     .layout_col-3
         .service_item
@@ -52,12 +17,9 @@ mixin service(rowNeeded,colNeeded)
         - row++;
 
 mixin service_about
-    .layout.service.service__about
-        .layout_section
-            .layout_row
-                each item in serviceItems.slice(6,9)
-                    .layout_col-3
-                        .service_item
-                            .service_icon.service_icon__about !{item.icon}
-                            h5.service_title=item.title
-                            .service_text.service_text__about= item.text
+    each item in serviceItems.slice(6,9)
+        .layout_col-3
+            .service_item
+                .service_icon.service_icon__about !{item.icon}
+                h5.service_title=item.title
+                .service_text.service_text__about= item.text

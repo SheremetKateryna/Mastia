@@ -1,7 +1,6 @@
 $(document).ready(function () {
-$('.project_photo__modifier').click(function(event) {
-    alert('hello');
-    var path = $(this).attr('src');
+$('.project_inner').on('click', $('.project_photo__modifier'), function(event) {
+    var path = $(this).children().children().children().attr('src');
     $('body').append('<div class="_overlay"></div><div class="_magnify"><img src="'+path+'"><div class="_close-popup"><i></i></div></div>');
     $('._magnify').css({
         left: ($(document).width() - $('._magnify').outerWidth())/2,

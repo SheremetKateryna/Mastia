@@ -23,7 +23,17 @@
 	align-items: center;
 	text-align: center;
   margin-top: 300px;
-   
+  position: relative;
+   &_arrow-next {
+    position: absolute;
+    right: 50px;
+    top: calc(50% - 60px);
+}
+&_arrow-prev {
+    position: absolute;
+    left: 50px;
+    top: calc(50% - 60px);
+}
   &_title{
    text-transform: uppercase;
    font:600 50px Raleway;
@@ -34,20 +44,8 @@
     font:400 14px/22px OpenSans;
     color:  #ffffff;
     width: 560px;
-    padding-top: 30px;
-    margin: auto;
+    margin: 10px auto 30px;
   }
-}
-
-.button-slider {
-  font:400 14px/34px Play;
-  color:  #ffffff;
-  text-transform: uppercase;
-  background: transparent;
-  width: 140px;
-  height: 40px;
-  margin-top: 40px;
-  border: 1px solid #ffffff;
 }
 
 

@@ -4,26 +4,24 @@
     <meta charset="UTF-8">
     <title>home</title>
     <link rel="shortcut icon" href="img/favicon.png" type="image/x-icon">
-    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,400i,600,700,800|Play:400,700|Raleway:400,500,600,700" rel="stylesheet">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" type="text/css" href="style/normalize.css">
+    <link rel="stylesheet" type="text/css" href="style/fonts.css">
+    <link rel="stylesheet" type="text/css" href="style/normolize.css">
     <link rel="stylesheet" type="text/css" href="style/style.css">
     <link rel="stylesheet" type="text/css" href="slick/slick/slick.css">
     <link rel="stylesheet" type="text/css" href="slick/slick/slick-theme.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script type="text/javascript" src="slick/slick/slick.min.js"></script>
+    <script src="js/slider.js"></script>
     <script src="js/link.js"></script>
     <script src="js/page.js"></script>
-    <script src="js/photoclick.js"></script>
+    <script src="js/photo.js"></script>
   </head>
   <body>
-    <div class="header_top-wrap">
-      <div class="layout">
-        <div class="layout_section">
-          <div class="header_top">
-            <div class="header_network"><a class="header_link" href=""><i class="fab fa-facebook-f header_icon"></i></a><a class="header_link" href=""><i class="fab fa-twitter header_icon"></i></a><a class="header_link" href=""><i class="fab fa-linkedin-in header_icon"></i></a><a class="header_link" href=""><i class="fab fa-google-plus-g header_icon"></i></a></div>
-            <div class="header_contact"><i class="far fa-clock header_icon header_icon__modifier"></i><span class="header_contact-item">Mon - Sat: 7:00 - 17:00</span><i class="fa fa-phone header_icon header_icon__modifier"></i><span class="header_contact-item">+386 40 111 55555</span><i class="far fa-envelope header_icon header_icon__modifier"></i><span class="header_contact-item">info@yourdomain.com</span></div>
-          </div>
+    <div class="layout header_top-wrap">
+      <div class="layout_section">
+        <div class="header_top">
+          <div class="header_network"><a class="header_link" href=""><i class="fab fa-facebook-f header_icon"></i></a><a class="header_link" href=""><i class="fab fa-twitter header_icon"></i></a><a class="header_link" href=""><i class="fab fa-linkedin-in header_icon"></i></a><a class="header_link" href=""><i class="fab fa-google-plus-g header_icon"></i></a></div>
+          <div class="header_contact"><i class="far fa-clock header_icon header_icon__modifier"></i><span class="header_contact-item">Mon - Sat: 7:00 - 17:00</span><i class="fa fa-phone header_icon header_icon__modifier"></i><span class="header_contact-item">+386 40 111 55555</span><i class="far fa-envelope header_icon header_icon__modifier"></i><span class="header_contact-item">info@yourdomain.com</span></div>
         </div>
       </div>
     </div>
@@ -34,33 +32,35 @@
         </div>
       </div>
     </div>
-    <section class="header-wrap">
+    <section class="layout header-wrap">
       <div class="layout">
         <div class="layout_section">
+          <button class="button button__slider slider_arrow-prev _prewArrow"><i class="fa fa-chevron-left"></i></button>
           <div class="header-slider">
             <div class="slider">
               <h1 class="slider_title">we care about your bussines</h1>
               <div class="slider_text">
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam elementum consectetur egestas.Nulla nisi nisi, rutrum vitae nunc non, bibendum euismod nulla</div>
-              <input class="button-slider" type="submit" value="about as">
+              <input class="button button__slider" type="submit" value="about as">
             </div>
             <div class="slider">
               <h1 class="slider_title">we care about your bussines</h1>
               <div class="slider_text">
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam elementum consectetur egestas.Nulla nisi nisi, rutrum vitae nunc non, bibendum euismod nulla</div>
-              <input class="button-slider" type="submit" value="about as">
+              <input class="button button__slider" type="submit" value="about as">
             </div>
             <div class="slider">
               <h1 class="slider_title">we care about your bussines</h1>
               <div class="slider_text">
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam elementum consectetur egestas.Nulla nisi nisi, rutrum vitae nunc non, bibendum euismod nulla</div>
-              <input class="button-slider" type="submit" value="about as">
+              <input class="button button__slider" type="submit" value="about as">
             </div>
           </div>
+          <button class="button button__slider _nextArrow slider_arrow-next"><i class="fa fa-chevron-right"></i></button>
         </div>
       </div>
     </section>
-    <div class="service">
+    <div class="layout service">
       <div class="layout">
         <div class="layout_section">
           <div class="layout_row">
@@ -130,28 +130,26 @@
         </div>
       </div>
     </div>
-    <div class="clients-wrap _scrollTo">
-      <div class="layout">
-        <div class="layout_section">
-          <section class="clients _scrollTo">
-            <div class="client_item">
-              <div class="client_count">456</div>
-              <div class="client_title">happy clients</div>
-            </div>
-            <div class="client_item">
-              <div class="client_count">56</div>
-              <div class="client_title">projects</div>
-            </div>
-            <div class="client_item">
-              <div class="client_count">456</div>
-              <div class="client_title">happy clients</div>
-            </div>
-            <div class="client_item">
-              <div class="client_count">456</div>
-              <div class="client_title">happy clients</div>
-            </div>
-          </section>
-        </div>
+    <div class="layout clients-wrap _scrollTo">
+      <div class="layout_section">
+        <section class="clients _scrollTo">
+          <div class="client_item">
+            <div class="client_count">456</div>
+            <div class="client_title">happy clients</div>
+          </div>
+          <div class="client_item">
+            <div class="client_count">56</div>
+            <div class="client_title">projects</div>
+          </div>
+          <div class="client_item">
+            <div class="client_count">456</div>
+            <div class="client_title">happy clients</div>
+          </div>
+          <div class="client_item">
+            <div class="client_count">456</div>
+            <div class="client_title">happy clients</div>
+          </div>
+        </section>
       </div>
     </div>
     <div class="layout">
@@ -218,20 +216,6 @@
         <div class="layout_section">Made with <span class="footer_copyright footer_copyright__heart"><i class="fa fa-heart"> </i></span> by Revolthemes. All Rights Reserved</div>
       </div>
     </footer>
-    <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
-    <script type="text/javascript" src="slick/slick/slick.min.js"></script>
-    <script>
-      $(document).ready(function(){
-      $('.header-slider').slick({
-      arrows: true,
-      dots: false,
-      speed: 700,
-      //- infinite: true,
-      slidesToShow: 1,
-      //- adaptiveHeight: true
-      });
-      });
-    </script>
     <script>
       $(document).ready(function(){
       $('.project_inner img').addClass('project_photo__modifier');

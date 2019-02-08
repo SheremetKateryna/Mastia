@@ -2,12 +2,14 @@
 include data/services
 include data/team
 include data/ability
+include data/reviews
 include data/footer
 
 include bem/ability/ability
 include bem/team/team
 include bem/footer/footer
 include bem/service/service
+include bem/reviews/reviews
 include bem/header/header
 include bem/page_title/page_title
 
@@ -17,22 +19,29 @@ html(lang='en')
   head
     meta(charset='UTF-8')
     title about-us
-    link(rel='shortcut icon' href='img/favicon.png' type='image/x-icon')
-    link(rel='stylesheet' href='https://use.fontawesome.com/releases/v5.6.3/css/all.css')
-    link(href='https://fonts.googleapis.com/css?family=Open+Sans:300,400,400i,600,700,800|Play:400,700|Raleway:400,500,600,700" rel="stylesheet')
-    link(rel='stylesheet', href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css')
-    link(rel='stylesheet' href='https://use.fontawesome.com/releases/v5.6.3/css/all.css' integrity='sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/' crossorigin='anonymous')
-    link(rel='stylesheet', href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css')
-    link(rel='stylesheet', type='text/css', href='style/normalize.css')
+    link(rel='shortcut icon', href='img/favicon.png', type='image/x-icon')
+    link(rel='stylesheet', type='text/css', href='style/fonts.css')
+    link(rel='stylesheet', type='text/css', href='style/normolize.css')
     link(rel='stylesheet', type='text/css', href='style/style.css')
+    link(rel='stylesheet', type='text/css', href='slick/slick/slick.css')
+    link(rel='stylesheet', type='text/css', href='slick/slick/slick-theme.css')
     script(src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js')
+    script(type='text/javascript', src='slick/slick/slick.min.js')
+    script(src='js/slider.js')
     script(src='js/link.js')
     script(src='js/page.js')
+    script(src='js/dropdown.js')
   body
   +header
   +page_title('about us')
   +abilityWho
-  +service_about
+  .layout.service.service__about
+    .layout_section
+        .layout_row
+          +service_about
   +abilityWhatWeDo
+  .layout.service.service__about
+    .layout_section
+        +reviews 
   +team
   +footer

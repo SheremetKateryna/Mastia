@@ -16,11 +16,11 @@ $('.project_zoom').on('click', $('.project_photo__modifier'), function(event) {
     });
   });
 
-  $('body').on('click', '._magnify', function(event) {
-    event.preventDefault();
-    $('._overlay, ._magnify').fadeOut('fast', function() {
-      $('._close-popup, ._magnify, ._overlay').remove();
-    });
-  });
+  // $('body').on('click', '._magnify', function(event) {
+  //   event.preventDefault();
+  //   $('._overlay, ._magnify').fadeOut('fast', function() {
+  //     $('._close-popup, ._magnify, ._overlay').remove();
+  //   });
+  // });
   
 });

@@ -1,8 +1,8 @@
-include data/footer
+include ../data/footer
 
-include bem/page_title/page_title
-include bem/header/header
-include bem/footer/footer
+include ../bem/page_title/page_title
+include ../bem/header/header
+include ../bem/footer/footer
 
 doctype html
 html(lang='en')
@@ -10,12 +10,12 @@ html(lang='en')
     meta(charset='UTF-8')
     title contact
     link(rel='shortcut icon' href='img/favicon.png' type='image/x-icon')
-    link(rel='stylesheet', type='text/css', href='style/fonts.css')
-    link(rel='stylesheet', type='text/css', href='style/normolize.css')
-    link(rel='stylesheet', type='text/css', href='style/style.css')
+    link(rel='stylesheet', type='text/css', href='dev/style/fonts.css')
+    link(rel='stylesheet', type='text/css', href='dev/style/normolize.css')
+    link(rel='stylesheet', type='text/css', href='dest/style/style.css')
     script(src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js')
-    script(src='js/link.js')
-    script(src='js/page.js')
+    script(src='dest/js/link.js')
+    script(src='dest/js/page.js')
   body
     +header
     +page_title('contact')
@@ -23,7 +23,7 @@ html(lang='en')
       .layout_section
         section.contact
           h2.h2 Contact Us
-          include bem/form/form
+          include ../bem/form/form
     .layout.map._map
     script.
       var map = null;

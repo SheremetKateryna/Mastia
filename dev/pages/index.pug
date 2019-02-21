@@ -1,16 +1,16 @@
-include data/services
-include data/projects
-include data/counts
-include data/hblog
-include data/footer
-include data/projects
+include ../data/services
+include ../data/projects
+include ../data/counts
+include ../data/hblog
+include ../data/footer
+include ../data/projects
 
-include bem/service/service
-include bem/project/project
-include bem/count/count
-include bem/blog/blog
-include bem/header/header
-include bem/footer/footer
+include ../bem/service/service
+include ../bem/project/project
+include ../bem/count/count
+include ../bem/blog/blog
+include ../bem/header/header
+include ../bem/footer/footer
 
 doctype html
 html(lang='en')
@@ -18,21 +18,21 @@ html(lang='en')
     meta(charset='UTF-8')
     title home
     link(rel='shortcut icon', href='img/favicon.png', type='image/x-icon')
-    link(rel='stylesheet', type='text/css', href='style/fonts.css')
-    link(rel='stylesheet', type='text/css', href='style/normolize.css')
-    link(rel='stylesheet', type='text/css', href='style/style.css')
-    link(rel='stylesheet', type='text/css', href='slick/slick/slick.css')
-    link(rel='stylesheet', type='text/css', href='slick/slick/slick-theme.css')
+    link(rel='stylesheet', type='text/css', href='dev/style/fonts.css')
+    link(rel='stylesheet', type='text/css', href='dev/style/normolize.css')
+    link(rel='stylesheet', type='text/css', href='dest/style/style.css')
+    link(rel='stylesheet', type='text/css', href='dev/slick/slick/slick.css')
+    link(rel='stylesheet', type='text/css', href='dev/slick/slick/slick-theme.css')
     script(src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js')
-    script(type='text/javascript', src='slick/slick/slick.min.js')
-    script(src='js/slider.js')
-    script(src='js/link.js')
-    script(src='js/page.js')
-    script(src='js/photo.js')
+    script(type='text/javascript', src='dev/slick/slick/slick.min.js')
+    script(src='dest/js/slider.js')
+    script(src='dest/js/link.js')
+    script(src='dest/js/page.js')
+    script(src='dest/js/photo.js')
 
   body
     +header
-    include bem/slider/slider
+    include ../bem/slider/slider
     .layout.service
       .layout
         .layout_section
